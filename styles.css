@@ -25,15 +25,15 @@ p {
 .banner {
     border: 2px solid white;
     background-image: linear-gradient(to bottom right, rgb(0, 0, 48), rgb(0,  0, 100));
-    width: 50%;
+    width: 75%;
     position: fixed;
     top: 25%;
-    left: 25%;
+    left: 12.5%;
     z-index: 10;
 }
 
 body {
-    background-image: linear-gradient(to bottom right, #606060, #656565);
+    background-image: linear-gradient(to bottom right, #606060, #808080);
     background-size: cover;
     background-attachment: fixed;
 }
