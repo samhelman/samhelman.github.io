@@ -3,33 +3,27 @@
     border: 0;
 }
 
-h1 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-p {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-.title {
-    border: 2px solid white;
-    position: relative;
-    margin: 20px;
-    padding: 10px;
-}
-
-.banner {
-    border: 2px solid white;
+nav {
     background-image: linear-gradient(to bottom right, rgb(0, 0, 48), rgb(0,  0, 100));
-    width: 75%;
-    position: fixed;
-    top: 25%;
-    left: 12.5%;
-    z-index: 10;
+    font-size: 1.25rem;
+    text-align: center;
+    color: white;
+}
+
+a.nav-text {
+    color: white;
+}
+
+a:hover {
+    color: rgba(0, 0, 48);
+    background-color: grey; opacity: .75;
+    text-decoration: none;
+}
+
+main {
+    background-color: white;
+    height: 1000px;
+    padding: 20px;
 }
 
 body {
