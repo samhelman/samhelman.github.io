@@ -64,10 +64,25 @@
 
 .profile-pic {
     display: block;
-    margin-top: 50px;
+    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
     width: 15%;
     border-radius: 50%;
+}
+
+.main-content-3 {
+    background: url("./images/pierogi.jpg") no-repeat center right fixed;
+    background-size: cover;
+}
+
+.main-content-4 {
+    background: url("./images/beach.jpg") no-repeat center right fixed;
+    background-size: cover;
+}
+
+.main-content-5 {
+    background: url("./images/leaves.jpg") no-repeat center right fixed;
+    background-size: cover;
 }
 
