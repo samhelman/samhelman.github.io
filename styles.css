@@ -37,15 +37,6 @@
     border-bottom: 1px solid rgba(210,210,210,1);
 }
 
-main {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
-
-main div {
-    scroll-snap-align: start;
-}
-
 .fill-screen {
     height: 100vh;
     padding-top: 45px;
