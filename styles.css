@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     color: rgba(50,50,50,1);
+    overflow: scroll;
 }
 
 .main-header {
@@ -40,23 +41,17 @@
     padding-top: 45px;
 }
 
+div.main-content-title {
+    background: url("./images/background-lightbulb.jpg") no-repeat center right fixed;
+    background-size: cover;
+    padding: 60vh 4vw;
+}  
+
 @media only screen and (max-width: 600px) {
     div.main-content-title {
-        background-image: url("./images/background-lightbulb.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100vh;
+        background-attachment: scroll;
         padding: 10vh 4vw;
     }  
-}
-
-@media only screen and (min-width: 600px) {
-    .main-content-title {
-        background: url("./images/background-lightbulb.jpg") no-repeat center right fixed;
-        background-size: cover;
-        padding: 60vh 4vw;
-    } 
 }
 
 .main-content-title h1 {
@@ -120,9 +115,6 @@
     }
     .profile-pic {
         width: 30%;
-    }
-    .fill-screen {
-        height: auto;
     }
 }
 
