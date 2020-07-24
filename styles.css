@@ -115,5 +115,12 @@ div.main-content-title {
     .profile-pic {
         width: 30%;
     }
+    .collapsable {
+        height: 0;
+        overflow: hidden;
+    }
+    .menu-icon {
+        padding: .5em;
+    }
 }
 

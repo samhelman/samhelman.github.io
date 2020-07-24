@@ -9,8 +9,9 @@
   <body>
 
     <header class="main-header">
+      <img id="toggle" class="menu-icon menu-button-header" src="./icons/menu-icon.svg" alt="Menu" width="50px" height="50px"/>
       <nav class="nav main-nav">
-        <ul>
+        <ul id="nav-bar" class="collapsable">
           <li><a href="/index.html">Home</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Experience</a></li>
@@ -44,5 +45,23 @@
     <div class="fill-screen main-content-5">
 
     </div>
+  <script>
+    function openNav() {
+      document.getElementById("nav-bar").style.height = "auto"
+    };
+    function closeNav() {
+      document.getElementById("nav-bar").style.height = "0"
+    };
+    function toggleNav() {
+      var height = document.getElementById("nav-bar").clientHeight
+      if (height > 0) {
+        closeNav()
+      } else {
+        openNav()
+      }
+    };
+    const toggle = document.getElementById("toggle");
+    toggle.addEventListener("click", toggleNav);
+  </script>
   </body>
 </html>
