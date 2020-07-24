@@ -10,7 +10,6 @@
 
 .main-header {
     background-color: white;
-    color: rgba(50,50,50,1);
     position: fixed;
     width: 100%;
 }
@@ -22,7 +21,6 @@
 .nav a {
     display: inline-block;
     padding: .5em;
-    color: rgba(50,50,50,1);
     text-decoration: none;
 }
 
@@ -42,10 +40,23 @@
     padding-top: 45px;
 }
 
-.main-content-title {
-    background: url("./images/background-lightbulb.jpg") no-repeat center right fixed;
-    background-size: cover;
-    padding: 25vw 4vw;
+@media only screen and (max-width: 600px) {
+    div.main-content-title {
+        background-image: url("./images/background-lightbulb.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        padding: 10vh 4vw;
+    }  
+}
+
+@media only screen and (min-width: 600px) {
+    .main-content-title {
+        background: url("./images/background-lightbulb.jpg") no-repeat center right fixed;
+        background-size: cover;
+        padding: 60vh 4vw;
+    } 
 }
 
 .main-content-title h1 {
@@ -59,30 +70,59 @@
 
 .main-content p {
     text-align: justify;
-    padding: .5em 20vw;
+    margin: .5em 20vw;
+    padding: .5em;
+    border-top: 1px solid rgba(50,50,50,1);
+    border-bottom: 1px solid rgba(50,50,50,1);
 }
 
 .profile-pic {
     display: block;
-    margin-top: 5vh;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5vh auto;
     width: 15%;
     border-radius: 50%;
 }
 
 .main-content-3 {
-    background: url("./images/pierogi.jpg") no-repeat center right fixed;
+    background: url("./images/pierogi.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
 .main-content-4 {
-    background: url("./images/beach.jpg") no-repeat center right fixed;
+    background: url("./images/beach.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
 .main-content-5 {
-    background: url("./images/leaves.jpg") no-repeat center right fixed;
+    background: url("./images/leaves.jpg") no-repeat center center fixed;
     background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-content-title h1 {
+        font-size: 12vw;
+    }
+    .main-content-title p {
+        font-size: 4vw;
+    }
+    .main-header {
+        position: relative;
+    }
+    .nav a {
+        display: list-item;
+        font-size: 1.2em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    .main-content p {
+        margin: .5em 10vw;
+    }
+    .profile-pic {
+        width: 30%;
+    }
+    .fill-screen {
+        height: auto;
+    }
 }
 
