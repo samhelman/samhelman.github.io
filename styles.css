@@ -11,6 +11,7 @@
 .main-header {
     background-color: white;
     position: fixed;
+    height: auto;
     width: 100%;
 }
 
@@ -92,6 +93,13 @@ div.main-content-title {
     background-size: cover;
 }
 
+@media only screen and (min-width: 600px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+
 @media only screen and (max-width: 600px) {
     .main-content-title h1 {
         font-size: 12vw;
@@ -123,4 +131,3 @@ div.main-content-title {
         padding: .5em;
     }
 }
-
