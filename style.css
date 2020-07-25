@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,200;1,300;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: rgba(50,50,50,1);
+}
+
+.main-header {
+  font-size: 1.2em;
+  background-color: white;
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.nav li {
+  text-align: center;
+}
+
+.nav a {
+  display: list-item;
+  padding: .5em;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: rgba(210,210,210,.3);
+}
+
+.main-nav {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: lighter;
+  border-bottom: 1px solid rgba(210,210,210,1);
+}
+
+.collapsable {
+  height: 0;
+  overflow: hidden;
+}
+
+.fill-screen {
+  height: 100vh;
+  padding-top: 45px;
+}
+
+.main-content-title {
+  background: url("./images/background-lightbulb.jpg") no-repeat center right scroll;
+  background-size: cover;
+  padding: 10vh 4vw;
+} 
+
+.main-content-title h1 {
+  font-size: 12vw;
+}
+
+.main-content-title p {
+  font-size: 4vw;
+}
+
+.main-content h2 {
+  text-align: center;
+  padding-top: .5em;
+}
+
+.main-content p {
+  font-size: 1.2em;
+  text-align: justify;
+  margin: .5em 20vw;
+  padding: .5em;
+  border-top: 1px solid rgba(50,50,50,1);
+  border-bottom: 1px solid rgba(50,50,50,1);
+}
+
+.profile-pic {
+  display: block;
+  margin: 5vh auto;
+  width: 30%;
+  border-radius: 50%;
+}
+
+.main-content-3 {
+  background: url("./images/pierogi.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main-content-4 {
+  background: url("./images/beach.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main-content-5 {
+  background: url("./images/leaves.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 600px) {
+  .menu-icon {
+      display: none;
+  }
+  .collapsable {
+    height: auto;
+  }
+  .main-header {
+    position: fixed;
+  }
+  .main-nav {
+    font-size: 1em;
+  }
+  .nav li {
+    display: inline;
+  }
+  .nav a {
+    display: inline-block;
+  }
+  .main-content-title {
+    padding: 60vh 4vw;
+  }
+  .main-content-title h1 {
+    font-size: 4em;
+  }
+  .main-content-title p {
+    font-size: 1em;
+  }
+  .main-content p {
+    font-size: 1em;
+  }
+  .profile-pic {
+    width: 15%;
+  }
+  .main-content-title {
+    background-attachment: fixed;
+  }
+}
