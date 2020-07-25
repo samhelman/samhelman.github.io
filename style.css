@@ -70,6 +70,7 @@
   font-size: 1.2em;
   text-align: justify;
   margin: .5em 20vw;
+  margin-bottom: 10vh;
   padding: .5em;
   border-top: 1px solid rgba(50,50,50,1);
   border-bottom: 1px solid rgba(50,50,50,1);
@@ -82,19 +83,21 @@
   border-radius: 50%;
 }
 
-.main-content-3 {
-  background: url("./images/pierogi.jpg") no-repeat center center fixed;
-  background-size: cover;
+.footer {
+  background-color: rgba(50,50,50,1);
+  padding: 5vh 5vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.main-content-4 {
-  background: url("./images/beach.jpg") no-repeat center center fixed;
-  background-size: cover;
+.footer h1 {
+  color: white;
+  line-height: auto;
 }
 
-.main-content-5 {
-  background: url("./images/leaves.jpg") no-repeat center center fixed;
-  background-size: cover;
+.icons {
+  margin: 0 0 0 auto;
 }
 
 @media only screen and (min-width: 600px) {
