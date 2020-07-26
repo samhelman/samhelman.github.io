@@ -44,7 +44,6 @@
 
 .fill-screen {
   height: 100vh;
-  padding-top: 45px;
 }
 
 .main-content-title {
@@ -61,6 +60,10 @@
   font-size: 4vw;
 }
 
+.main-content {
+  overflow: hidden;
+}
+
 .main-content h2 {
   text-align: center;
   padding-top: .5em;
@@ -69,16 +72,22 @@
 .main-content p {
   font-size: 1.2em;
   text-align: justify;
-  margin: .5em 20vw;
-  margin-bottom: 10vh;
   padding: .5em;
   border-top: 1px solid rgba(50,50,50,1);
   border-bottom: 1px solid rgba(50,50,50,1);
 }
 
+.center-content {
+  position: relative;
+  margin: auto;
+  padding: 10vh 5vw;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .profile-pic {
+  margin: 3vh auto;
   display: block;
-  margin: 5vh auto;
   width: 30%;
   border-radius: 50%;
 }
@@ -87,7 +96,7 @@
   background-color: rgba(50,50,50,1);
   padding: 5vh 5vw;
   width: 100%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
@@ -131,10 +140,25 @@
   .main-content p {
     font-size: 1em;
   }
+  .center-content {
+    position: static;
+    margin: auto;
+    padding: 10vh 20vw;
+    transform: none;
+  }
   .profile-pic {
     width: 15%;
   }
   .main-content-title {
     background-attachment: fixed;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .fill-screen {
+    height: auto;
+  }
+  .main-content {
+    margin-bottom: 10vh;
   }
 }
