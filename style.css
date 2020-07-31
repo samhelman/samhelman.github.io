@@ -61,7 +61,8 @@
 }
 
 .main-content {
-  overflow: hidden;
+  height: auto;
+  padding: 5vh 5vw;
 }
 
 .main-content h2 {
@@ -75,14 +76,6 @@
   padding: .5em;
   border-top: 1px solid rgba(50,50,50,1);
   border-bottom: 1px solid rgba(50,50,50,1);
-}
-
-.center-content {
-  position: relative;
-  margin: auto;
-  padding: 10vh 5vw;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
 }
 
 .profile-pic {
@@ -137,28 +130,16 @@
   .main-content-title p {
     font-size: 1em;
   }
+  .main-content {
+    padding: 15vh 15vw;
+  }
   .main-content p {
     font-size: 1em;
-  }
-  .center-content {
-    position: static;
-    margin: auto;
-    padding: 10vh 20vw;
-    transform: none;
   }
   .profile-pic {
     width: 15%;
   }
   .main-content-title {
     background-attachment: fixed;
-  }
-}
-
-@media only screen and (max-height: 600px) {
-  .fill-screen {
-    height: auto;
-  }
-  .main-content {
-    margin-bottom: 10vh;
   }
 }
