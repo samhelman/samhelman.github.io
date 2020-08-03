@@ -42,8 +42,17 @@
   overflow: hidden;
 }
 
+main div {
+  padding: 3vh 5vw;
+  position: relative;
+}
+
 .fill-screen {
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.half-screen {
+  min-height: 50vh;
 }
 
 .main-content-title {
@@ -58,24 +67,43 @@
 
 .main-content-title p {
   font-size: 4vw;
+  padding: 0;
 }
 
-.main-content {
-  height: auto;
-  padding: 5vh 5vw;
-}
-
-.main-content h2 {
+main h2 {
   text-align: center;
-  padding-top: .5em;
 }
 
-.main-content p {
+main p {
   font-size: 1.2em;
   text-align: justify;
+  line-height: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+.background-image {
+  background: url(./images/pierogi.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.secondary {
+  background-color: rgba(100,100,100,1);
+}
+
+.secondary h2 {
+  color: white;
+}
+
+.secondary p {
+  color: white;
+}
+
+.quote {
   padding: .5em;
   border-top: 1px solid rgba(50,50,50,1);
   border-bottom: 1px solid rgba(50,50,50,1);
+  margin-right: 5vw;
+  margin-left: 5vw;
 }
 
 .profile-pic {
@@ -100,6 +128,32 @@
 
 .icons {
   margin: 0 0 0 auto;
+}
+
+.button {
+  font-size: 1.2em;
+  background-color: seagreen;
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: rgba(210,210,210,.3);
+  color: white;
+}
+
+.container {
+  padding: 0;
+}
+
+.preview {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 2px solid white;
 }
 
 @media only screen and (min-width: 600px) {
@@ -130,14 +184,14 @@
   .main-content-title p {
     font-size: 1em;
   }
-  .main-content {
-    padding: 15vh 15vw;
-  }
-  .main-content p {
-    font-size: 1em;
-  }
   .profile-pic {
-    width: 15%;
+    width: 8rem;
+  }
+  main div {
+    padding: 10vh 15vw;
+  }
+  main div p {
+    font-size: 1em;
   }
   .main-content-title {
     background-attachment: fixed;
