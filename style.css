@@ -44,7 +44,6 @@
 
 main div {
   padding: 3vh 5vw;
-  position: relative;
 }
 
 .fill-screen {
@@ -195,5 +194,23 @@ main p {
   }
   .main-content-title {
     background-attachment: fixed;
+  }
+  .button {
+    font-size: 1em;
+  }
+  .preview {
+    width: 30%;
+  }
+  .container {
+    display: inline-flex;
+    margin-bottom: 1rem;
+  }
+  .left-item {
+    margin-right: .5rem;
+    width: 50%;
+  }
+  .right-item {
+    margin-left: .5rem;
+    width: 50%;
   }
 }
