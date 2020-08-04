@@ -105,11 +105,39 @@ main p {
   margin-left: 5vw;
 }
 
+.profile-pic-container {
+  padding: 0;
+  position: relative;
+}
+
 .profile-pic {
   margin: 3vh auto;
   display: block;
   width: 30%;
   border-radius: 50%;
+}
+
+.profile-pic-open {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.open-image {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.close-icon {
+  position: absolute;
+  right: 0;
+  width: 15%;
+  padding: 1%;
 }
 
 .footer {
@@ -137,7 +165,7 @@ main p {
   color: white;
   border-radius: 1rem;
   padding: 1rem;
-  display: inline-block;
+  display: inline-flex;
   text-decoration: none;
 }
 

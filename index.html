@@ -27,8 +27,14 @@
         <p>Problem Solver, Results Oriented, Self Starter</p>
       </div>
       <div class="fill-screen">
-        <img class="profile-pic" src="./images/pierogi.jpg" alt="Image of Sam could not be displayed.">
-        <p class="quote">
+        <div class="profile-pic-container">
+          <div id="profile-pic-open" class="profile-pic-open">
+            <img id="close-icon" class="close-icon" src="./icons/close-white.svg">
+            <img class="open-image" src="./images/pierogi.jpg">
+          </div>
+          <img id="profile-pic" class="profile-pic" src="./images/pierogi.jpg" alt="Image of Sam could not be displayed.">
+        </div>
+         <p class="quote">
           I am a self-taught software developer with seven months' experience, 
           who invite challenges and loves using code to solve problems.
           I have a proven ability to learn new skills quickly, 
@@ -39,7 +45,8 @@
           that will challenge me, and will support me in realising 
           my potential.
         </p>
-      </div> 
+      </div>
+      
     </main>
     
     <footer>
@@ -81,5 +88,21 @@
         document.getElementById("nav-bar").style.height = "0"
       }
     }
+
+    //open profile picture when clicked
+    var profile_pic = document.getElementById("profile-pic")
+    var profile_pic_open = document.getElementById("profile-pic-open")
+    var close_icon = document.getElementById("close-icon")
+    function openProfilePic() {
+      profile_pic_open.style.height = "auto"
+    }
+    function closeProfilePic() {
+      profile_pic_open.style.height = "0"
+    }
+    profile_pic.addEventListener("click", openProfilePic);
+    close_icon.addEventListener("click", closeProfilePic)
+
+    //close profile picture when cross clicked
+    
   </script>
 </html>
