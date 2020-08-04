@@ -8,10 +8,20 @@
   color: rgba(50,50,50,1);
 }
 
+.grey {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.9);
+  height: 0;
+  overflow: hidden;
+  width: 100vw;
+  z-index: 100;
+}
+
 .main-header {
   font-size: 1.2em;
   background-color: white;
-  position: relative;
   height: auto;
   width: 100%;
 }
@@ -126,6 +136,7 @@ main p {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  z-index: 101;
 }
 
 .open-image {
@@ -143,8 +154,6 @@ main p {
 }
 
 .footer {
-  position: relative;
-  bottom: 0px;
   background-color: rgba(50,50,50,1);
   padding: 5vh 5vw;
   width: 100%;

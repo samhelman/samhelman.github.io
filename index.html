@@ -8,6 +8,8 @@
   </head>
   <body onresize="resizeNav()">
 
+    <div id="grey" class="grey"></div>
+
     <header class="main-header">
       <img id="toggle" class="menu-icon" src="./icons/menu-icon.svg" alt="Menu" width="50px" height="50px"/>
       <nav class="nav main-nav">
@@ -89,20 +91,21 @@
       }
     }
 
-    //open profile picture when clicked
+    //open profile picture and greys background when clicked
     var profile_pic = document.getElementById("profile-pic")
     var profile_pic_open = document.getElementById("profile-pic-open")
     var close_icon = document.getElementById("close-icon")
+    var grey = document.getElementById("grey")
     function openProfilePic() {
       profile_pic_open.style.height = "auto"
+      grey.style.height = "100vh"
     }
     function closeProfilePic() {
       profile_pic_open.style.height = "0"
+      grey.style.height = "0"
     }
     profile_pic.addEventListener("click", openProfilePic);
-    close_icon.addEventListener("click", closeProfilePic)
-
-    //close profile picture when cross clicked
-    
+    close_icon.addEventListener("click", closeProfilePic);
+    grey.addEventListener("click", closeProfilePic)
   </script>
 </html>
