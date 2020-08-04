@@ -113,6 +113,8 @@ main p {
 }
 
 .footer {
+  position: relative;
+  bottom: 0px;
   background-color: rgba(50,50,50,1);
   padding: 5vh 5vw;
   width: 100%;
@@ -139,11 +141,6 @@ main p {
   text-decoration: none;
 }
 
-.button:hover {
-  background-color: rgba(210,210,210,.3);
-  color: white;
-}
-
 .container {
   padding: 0;
 }
@@ -164,6 +161,12 @@ main p {
   }
   .main-header {
     position: fixed;
+    height: 44px;
+    z-index: 10;
+  }
+  main {
+    position: relative;
+    top: 44px;
   }
   .main-nav {
     font-size: 1em;
@@ -189,6 +192,9 @@ main p {
   main div {
     padding: 10vh 15vw;
   }
+  .top {
+    padding-top: 5vh;
+  }
   main div p {
     font-size: 1em;
   }
@@ -212,5 +218,9 @@ main p {
   .right-item {
     margin-left: .5rem;
     width: 50%;
+  }
+  .button:hover {
+    background-color: rgba(210,210,210,.3);
+    color: white;
   }
 }
