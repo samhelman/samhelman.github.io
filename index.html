@@ -119,14 +119,12 @@
     function openProfilePic() {
       profile_pic_open.style.height = "auto"
       grey.style.height = "100vh"
-      close_icon.style.display = "initial"
       scrollToCenter("open-profile-pic")
       disableScroll()
     }
     function closeProfilePic() {
       profile_pic_open.style.height = "0"
       grey.style.height = "0"
-      close_icon.style.display = "none"
       enableScroll()
     }
     profile_pic.addEventListener("click", openProfilePic);

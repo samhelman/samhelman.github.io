@@ -129,7 +129,7 @@
             </p>
             <p>
               The official version of the game can be downloaded 
-              <a href="https://play.google.com/store/apps/details?id=com.meepletouch.mrjackpocket&hl=en" target="_blank">here.</a>
+              <a href="https://play.google.com/store/apps/details?id=com.meepletouch.mrjackpocket&hl=en" target="_blank">here</a>.
             </p>
           </div>
           <div class="bottom-item right-item">
@@ -139,15 +139,36 @@
       </div>
     </main>
 
-    <div id="open-image-container" class="open-image-container">
-      <div class="relative">
-        <img id="close-icon" class="close-icon" src="./icons/close-white.svg">
-        <img id="open-mercado" class="open-image-portfolio" src="./images/WTFMercado.jpg">
-        <img id="open-stocktake" class="open-image-portfolio" src="./images/WTFStockTake.jpg">
-        <img id="open-resume" class="open-image-portfolio" src="./images/resume-website.jpg">
-        <img id="open-kimterpreting" class="open-image-portfolio" src="./images/kimterpreting.jpg">
-        <img id="open-jack" class="open-image-portfolio" src="./images/mr-jack.jpg">
-      </div> 
+        <div id="open-mercado" class="open-image-portfolio">       
+          <img id="mercado-close-icon" class="close-icon" src="./icons/close-white.svg">
+          <img class="image" src="./images/WTFMercado.jpg">  
+        </div>
+
+        <div id="open-stocktake" class="open-image-portfolio">       
+          <img id="stocktake-close-icon" class="close-icon" src="./icons/close-white.svg">
+          <img class="image" src="./images/WTFStockTake.jpg">
+          <img class="image" src="./images/WTFStockTake-2.jpg">
+          <img class="image" src="./images/WTFStockTake-3.jpg">
+          <img class="image" src="./images/WTFStockTake-4.jpg">
+        </div>
+
+        <div id="open-resume" class="open-image-portfolio">       
+          <img id="resume-close-icon" class="close-icon" src="./icons/close-white.svg">
+          <img class="image" src="./images/resume-website.jpg">
+          <img class="image" src="./images/resume-website-2.jpg">
+          <img class="image" src="./images/resume-website-3.jpg">
+        </div>
+
+        <div id="open-kimterpreting" class="open-image-portfolio">       
+          <img id="kim-close-icon" class="close-icon" src="./icons/close-white.svg">
+          <img class="image" src="./images/kimterpreting.jpg">   
+        </div>
+
+        <div id="open-jack" class="open-image-portfolio">       
+          <img id="jack-close-icon" class="close-icon" src="./icons/close-white.svg">
+          <img class="image" src="./images/mr-jack.jpg"> 
+        </div>
+      
     </div>
     
     <footer>
@@ -202,7 +223,11 @@
     var resume = document.getElementById("resume")
     var sign = document.getElementById("kimterpreting")
     var jack = document.getElementById("mr-jack")
-    var close_icon = document.getElementById("close-icon")
+    var mercado_close_icon = document.getElementById("mercado-close-icon")
+    var stocktake_close_icon = document.getElementById("stocktake-close-icon")
+    var resume_close_icon = document.getElementById("resume-close-icon")
+    var kim_close_icon = document.getElementById("kim-close-icon")
+    var jack_close_icon = document.getElementById("jack-close-icon")
     function disableScroll() { 
       // Get the current page scroll position 
       scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
@@ -221,9 +246,8 @@
     }
     function openImage(image_id, open_image_id) {
       var el = document.getElementById(open_image_id)
-      el.style.display = "initial"
+      el.style.display = "grid"
       grey.style.height = "100vh"
-      close_icon.style.display = "initial"
       scrollToCenter(image_id)
       disableScroll()
     }
@@ -234,7 +258,6 @@
       document.getElementById("open-kimterpreting").style.display = "none"
       document.getElementById("open-jack").style.display = "none"
       grey.style.height = "0"
-      close_icon.style.display = "none"
       enableScroll()
     }
     mercado.addEventListener("click", function(){openImage("WTFMercado", "open-mercado")})
@@ -243,7 +266,12 @@
     sign.addEventListener("click", function(){openImage("kimterpreting", "open-kimterpreting")})
     jack.addEventListener("click", function(){openImage("mr-jack", "open-jack")})
     grey.addEventListener("click", closeImage)
-    close_icon.addEventListener("click", closeImage)
+    mercado_close_icon.addEventListener("click", closeImage)
+    stocktake_close_icon.addEventListener("click", closeImage)
+    resume_close_icon.addEventListener("click", closeImage)
+    kim_close_icon.addEventListener("click", closeImage)
+    jack_close_icon.addEventListener("click", closeImage)
+    
 
   </script>
 </html>

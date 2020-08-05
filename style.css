@@ -111,6 +111,10 @@ main p {
   color: white;
 }
 
+.secondary a {
+  color: white;
+}
+
 .quote {
   padding: .5em;
   border-top: 1px solid rgba(50,50,50,1);
@@ -150,12 +154,12 @@ main p {
 }
 
 .close-icon {
-  position: absolute;
-  display: none;
+  position: fixed;
   right: 0;
   width: 10vw;
   margin: 3%;
   background-color: rgba(0,0,0,.5);
+  z-index: 105;
 }
 
 .footer {
@@ -199,8 +203,13 @@ main p {
 }
 
 .preview {
-  width: 100%;
+  max-width: 100%;
+  max-height: 80vh;
   border: 2px solid white;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
 }
 
 .relative {
@@ -218,19 +227,37 @@ main p {
   transform: translate(-50%, -50%);
 }
 
-.open-image-container {
+.open-image-portfolio {
   position: fixed;
+  display: none;
+  width: 90vw;
+  height: 90vh;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 101;
+  overflow: scroll;
 }
 
-.open-image-portfolio {
+.open-image-portfolio::-webkit-scrollbar {
   display: none;
-  max-width: 99vw;
+}
+
+.open-image-portfolio .image {
+  max-width: 90vw;
   max-height: 90vh;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  margin-bottom: 3%;
   border: 3px solid rgba(50,50,50,1)
+}
+
+#close-icon {
+  border: none;
 }
 
 @media only screen and (min-width: 600px) {
@@ -319,12 +346,16 @@ main p {
     max-height: 80vh;
   }
   .close-icon {
-    width: 8%;
+    width: 3rem;
+    margin: 1rem;
   }
   .footer {
     margin-top: 44px;
   }
   #coming-soon {
     min-height: 50vh;
+  }
+  .open-image-portfolio {
+    width: 90vw;
   }
 }
