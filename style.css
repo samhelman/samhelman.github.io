@@ -154,6 +154,7 @@ main p {
 }
 
 .footer {
+  position: relative;
   background-color: rgba(50,50,50,1);
   padding: 5vh 5vw;
   width: 100%;
