@@ -157,6 +157,7 @@ main p {
   position: relative;
   background-color: rgba(50,50,50,1);
   padding: 5vh 5vw;
+  margin-top: 44px;
   width: 100%;
   display: inline-flex;
   align-items: center;
