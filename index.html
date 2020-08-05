@@ -32,7 +32,7 @@
         <div class="profile-pic-container">
           <div id="profile-pic-open" class="profile-pic-open">
             <img id="close-icon" class="close-icon" src="./icons/close-white.svg">
-            <img class="open-image" src="./images/pierogi.jpg">
+            <img id="open-profile-pic" class="open-image" src="./images/pierogi.jpg">
           </div>
           <img id="profile-pic" class="profile-pic" src="./images/pierogi.jpg" alt="Image of Sam could not be displayed.">
         </div>
@@ -91,18 +91,37 @@
       }
     }
 
-    //open profile picture and greys background when clicked
+    //open profile picture, centers image vertically and greys background when clicked
     var profile_pic = document.getElementById("profile-pic")
     var profile_pic_open = document.getElementById("profile-pic-open")
     var close_icon = document.getElementById("close-icon")
     var grey = document.getElementById("grey")
+    function scrollToCenter(id) {
+      var el = document.getElementById(id);
+      el.scrollIntoView({block: "center"})
+    }
+    function disableScroll() { 
+      // Get the current page scroll position 
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+      // if any scroll is attempted, set this to the previous value 
+      window.onscroll = function() { 
+        window.scrollTo(scrollLeft, scrollTop); 
+      }; 
+    }  
+    function enableScroll() { 
+      window.onscroll = function() {}; 
+    } 
     function openProfilePic() {
       profile_pic_open.style.height = "auto"
       grey.style.height = "100vh"
+      scrollToCenter("open-profile-pic")
+      disableScroll()
     }
     function closeProfilePic() {
       profile_pic_open.style.height = "0"
       grey.style.height = "0"
+      enableScroll()
     }
     profile_pic.addEventListener("click", openProfilePic);
     close_icon.addEventListener("click", closeProfilePic);
