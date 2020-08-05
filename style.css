@@ -64,6 +64,10 @@ main div {
   min-height: 50vh;
 }
 
+.quarter-screen {
+  min-height: 25vh;
+}
+
 .main-content-title {
   background: url("./images/background-lightbulb.jpg") no-repeat center right scroll;
   background-size: cover;
@@ -147,9 +151,10 @@ main p {
 
 .close-icon {
   position: absolute;
+  display: none;
   right: 0;
-  width: 15%;
-  margin: 1%;
+  width: 10vw;
+  margin: 3%;
   background-color: rgba(0,0,0,.5);
 }
 
@@ -157,7 +162,6 @@ main p {
   position: relative;
   background-color: rgba(50,50,50,1);
   padding: 5vh 5vw;
-  margin-top: 44px;
   width: 100%;
   display: inline-flex;
   align-items: center;
@@ -197,6 +201,36 @@ main p {
 .preview {
   width: 100%;
   border: 2px solid white;
+}
+
+.relative {
+  position: relative;
+}
+
+.coming-soon {
+  font-size: 4em;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.open-image-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 101;
+}
+
+.open-image-portfolio {
+  display: none;
+  max-width: 99vw;
+  max-height: 90vh;
+  border: 3px solid rgba(50,50,50,1)
 }
 
 @media only screen and (min-width: 600px) {
@@ -269,11 +303,15 @@ main p {
     position: relative;
     margin: 0;
     top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    max-height: 70vh;
+    width: auto;
+    max-width: 100%;
   }
   .button:hover {
-    background-color: rgba(210,210,210,.3);
+    background-color: rgba(50,50,50,1);
     color: white;
   }
   .open-image {
@@ -282,5 +320,11 @@ main p {
   }
   .close-icon {
     width: 8%;
+  }
+  .footer {
+    margin-top: 44px;
+  }
+  #coming-soon {
+    min-height: 50vh;
   }
 }

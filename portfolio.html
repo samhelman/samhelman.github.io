@@ -21,6 +21,8 @@
       </nav>
     </header>
 
+    <div id="grey" class="grey"></div>
+
     <main>
       <div class="top">
         <h2>Portfolio</h2>
@@ -31,9 +33,12 @@
         </p>
         <p>
           Here, you will find a collection of my past projects ranging from
-          static websites to published mobile applications.
+          static websites to published mobile applications, as well as some 
+          that I have planned for the near future.
         </p>
       </div>
+
+      <!--WTFMercado Content-->
       <div class="portfolio secondary">
         <div class="container">
           <div class="top-item left-item">
@@ -45,13 +50,105 @@
             </p>
           </div>
           <div class="bottom-item right-item">
-            <img src="./images/leaves.jpg" class="preview">
+            <img id="WTFMercado" src="./images/WTFMercado.jpg" class="preview">
           </div>
         </div>
         <a href="https://github.com/samhelman/WTFMercado" target="_blank" class="button left">Find Out More</a>
       </div>
-      <div class="background-image half-screen"></div>
+
+      <!--WTFStockTake Content-->
+      <div class="portfolio">
+        <div class="container">
+          <div class="top-item left-item">
+            <h2>WTFStockTake</h2>
+            <p>
+              A mobile application initially developed in order to help me track the stock 
+              levels of the frozen meals in the Willowtree Farm production kitchen. It allows 
+              users to add and remove items, update stock levels of each item, and prompts 
+              the user when that item has low stock. The app is now availble to download 
+              from the Play Store 
+              <a href="https://play.google.com/store/apps/details?id=org.helman.wtfstocktake&hl=en" target="_blank">here</a>.
+            </p>
+          </div>
+          <div class="bottom-item right-item">
+            <img id="WTFStockTake" src="./images/WTFStockTake.jpg" class="preview">
+          </div>
+        </div>
+        <a href="https://github.com/samhelman/WTFStockTake" target="_blank" class="button left">Find Out More</a>
+      </div>
+      
+      <!--samhelman.github.io content-->
+      <div class="portfolio secondary">
+        <div class="container">
+          <div class="top-item left-item">
+            <h2>Resume Website</h2>
+            <p>
+              This website is being developed to serve as an accompaniment to me resume. 
+              I am using this as an opportunity to learn the fundamentals of HTML and CSS, 
+              with a view to using frameworks like Django in the future. I am also using 
+              this as an opportunity to take my first steps with JavaScript.
+            </p>
+          </div>
+          <div class="bottom-item right-item">
+            <img id="resume" src="./images/resume-website.jpg" class="preview">
+          </div>
+        </div>
+        <a href="https://github.com/samhelman/samhelman.github.io" target="_blank" class="button left">Find Out More</a>
+      </div>
+
+      <div id="coming-soon" class="background-image quarter-screen relative">
+        <h1 class="coming-soon">Coming Soon...</h1>
+      </div>
+
+      <!--coming soon kimterpreting-->
+      <div class="portfolio">
+        <div class="container">
+          <div class="top-item left-item">
+            <h2>Kimterpreting</h2>
+            <p>
+              I intend to compound my learning and new knowledge of mobile first 
+              responsive web development by building a second static HTML website 
+              for commercial use by a self employed BSL interpreter in the UK.
+            </p> 
+          </div>
+          <div class="bottom-item right-item">
+            <img id="kimterpreting" src="./images/kimterpreting.jpg" class="preview">
+          </div>
+        </div>
+      </div>
+
+      <!--coming soon javascript mr.jack project-->
+      <div class="portfolio secondary">
+        <div class="container">
+          <div class="top-item left-item">
+            <h2>Mr. Jack Pocket</h2>
+            <p>
+              As an excercise in building a more full knowledge of Javascript, I intend 
+              to combine my passion for programming and board games by replicating a simple 
+              board game in code.
+            </p>
+            <p>
+              The official version of the game can be downloaded 
+              <a href="https://play.google.com/store/apps/details?id=com.meepletouch.mrjackpocket&hl=en" target="_blank">here.</a>
+            </p>
+          </div>
+          <div class="bottom-item right-item">
+            <img id="mr-jack" src="./images/mr-jack.jpg" class="preview">
+          </div>
+        </div>
+      </div>
     </main>
+
+    <div id="open-image-container" class="open-image-container">
+      <div class="relative">
+        <img id="close-icon" class="close-icon" src="./icons/close-white.svg">
+        <img id="open-mercado" class="open-image-portfolio" src="./images/WTFMercado.jpg">
+        <img id="open-stocktake" class="open-image-portfolio" src="./images/WTFStockTake.jpg">
+        <img id="open-resume" class="open-image-portfolio" src="./images/resume-website.jpg">
+        <img id="open-kimterpreting" class="open-image-portfolio" src="./images/kimterpreting.jpg">
+        <img id="open-jack" class="open-image-portfolio" src="./images/mr-jack.jpg">
+      </div> 
+    </div>
     
     <footer>
       <div class="footer">
@@ -92,7 +189,61 @@
       } else {
         document.getElementById("nav-bar").style.height = "0"
       }
-    }
+    }  
+  </script>
+
+  <!--page wide scripts-->
+  <script>
     
+    //opens image, centers, disables scrolling when clicked
+    var container = document.getElementById("open-image-container")
+    var mercado = document.getElementById("WTFMercado")
+    var stocktake = document.getElementById("WTFStockTake")
+    var resume = document.getElementById("resume")
+    var sign = document.getElementById("kimterpreting")
+    var jack = document.getElementById("mr-jack")
+    var close_icon = document.getElementById("close-icon")
+    function disableScroll() { 
+      // Get the current page scroll position 
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+      // if any scroll is attempted, set this to the previous value 
+      window.onscroll = function() { 
+        window.scrollTo(scrollLeft, scrollTop); 
+      }; 
+    }  
+    function enableScroll() { 
+      window.onscroll = function() {}; 
+    }
+    function scrollToCenter(id) {
+      var el = document.getElementById(id);
+      el.scrollIntoView({block: "center"})
+    }
+    function openImage(image_id, open_image_id) {
+      var el = document.getElementById(open_image_id)
+      el.style.display = "initial"
+      grey.style.height = "100vh"
+      close_icon.style.display = "initial"
+      scrollToCenter(image_id)
+      disableScroll()
+    }
+    function closeImage() {
+      document.getElementById("open-mercado").style.display = "none"
+      document.getElementById("open-stocktake").style.display = "none"
+      document.getElementById("open-resume").style.display = "none"
+      document.getElementById("open-kimterpreting").style.display = "none"
+      document.getElementById("open-jack").style.display = "none"
+      grey.style.height = "0"
+      close_icon.style.display = "none"
+      enableScroll()
+    }
+    mercado.addEventListener("click", function(){openImage("WTFMercado", "open-mercado")})
+    stocktake.addEventListener("click", function(){openImage("WTFStockTake", "open-stocktake")})
+    resume.addEventListener("click", function(){openImage("resume", "open-resume")})
+    sign.addEventListener("click", function(){openImage("kimterpreting", "open-kimterpreting")})
+    jack.addEventListener("click", function(){openImage("mr-jack", "open-jack")})
+    grey.addEventListener("click", closeImage)
+    close_icon.addEventListener("click", closeImage)
+
   </script>
 </html>
