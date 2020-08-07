@@ -10,20 +10,20 @@
   </head>
   <body onresize="resizeNav()">
 
+    <div id="grey" class="grey"></div>
+
     <header class="main-header">
       <img id="toggle" class="menu-icon" src="./icons/menu-icon.svg" alt="Menu" width="50px" height="50px"/>
       <nav class="nav main-nav">
         <ul id="nav-bar" class="collapsable">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./portfolio.html">Portfolio</a></li>
-          <li><a href="#">Experience</a></li>
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="./dev.html">Experience</a></li>
+          <li><a href="./dev.html">Education</a></li>
+          <li><a href="./dev.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-
-    <div id="grey" class="grey"></div>
 
     <main>
       <div class="top">
@@ -97,7 +97,7 @@
         </div>
         <a href="https://github.com/samhelman/samhelman.github.io" target="_blank" class="button left">Find Out More</a>
       </div>
-
+      
       <div id="coming-soon" class="background-image quarter-screen relative">
         <h1 class="coming-soon">Coming Soon...</h1>
       </div>
@@ -148,6 +148,7 @@
           <img class="image" src="./images/WTFMercado.jpg">
         </div> 
       </div>
+
       <div id="stocktake-grid" class="image-grid scroll-snap-parent">
         <div class="image-container scroll-snap-child">
           <img class="image" src="./images/WTFStockTake.jpg">
@@ -162,6 +163,7 @@
           <img class="image" src="./images/WTFStockTake-4.jpg">
         </div>
       </div>
+
       <div id="resume-grid" class="image-grid scroll-snap-parent">
         <div class="image-container scroll-snap-child">
           <img class="image" src="./images/resume-website.jpg">
@@ -173,15 +175,14 @@
           <img class="image" src="./images/resume-website-3.jpg">
         </div>
       </div>
+
       <div id="kim-grid" class="image-grid scroll-snap-parent">
         <div class="image-container scroll-snap-child">
           <img class="image" src="./images/kimterpreting.jpg">
         </div>
       </div>
+      
       <div id="jack-grid" class="image-grid scroll-snap-parent">
-        <div class="image-container scroll-snap-child">
-          <img class="image" src="./images/mr-jack.jpg">
-        </div>
         <div class="image-container scroll-snap-child">
           <img class="image" src="./images/mr-jack.jpg">
         </div>
@@ -301,8 +302,5 @@
     //close image event listeners
     grey.addEventListener("click", closeImageContainer)
     closeIcon.addEventListener("click", closeImageContainer)
-
-    
-
   </script>
 </html>

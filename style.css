@@ -165,7 +165,6 @@ main p {
 }
 
 .footer {
-  position: relative;
   background-color: rgba(50,50,50,1);
   padding: 5vh 5vw;
   width: 100%;
@@ -208,10 +207,8 @@ main p {
   max-width: 100%;
   max-height: 80vh;
   border: 2px solid white;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin: auto;
 }
 
 .relative {
