@@ -9,11 +9,12 @@
 }
 
 .grey {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0,0,0,.9);
-  height: 0;
+  height: 100vh;
   overflow: hidden;
   width: 100vw;
   z-index: 100;
@@ -156,7 +157,8 @@ main p {
 .close-icon {
   position: fixed;
   right: 0;
-  width: 10vw;
+  width: 5vw;
+  max-width: 25px;
   margin: 3%;
   background-color: rgba(0,0,0,.5);
   z-index: 105;
@@ -227,37 +229,58 @@ main p {
   transform: translate(-50%, -50%);
 }
 
-.open-image-portfolio {
+.open-image-container {
+  display: none;
+  width: 95vw;
+  height: 95vh;
   position: fixed;
-  display: none;
-  width: 90vw;
-  height: 90vh;
+  margin: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
+  background-color: rgba(100,100,100,.5);
+  border: 1px solid white;
   z-index: 101;
-  overflow: scroll;
 }
 
-.open-image-portfolio::-webkit-scrollbar {
+.image-grid {
+  display: grid;
+  max-width: 94vw;
+  max-height: 94vh;
+  height: 0;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.image-grid::-webkit-scrollbar {
   display: none;
 }
 
-.open-image-portfolio .image {
-  max-width: 90vw;
-  max-height: 90vh;
+.image-container {
+  height: 94vh;
+  max-width: 94vw;
+  max-height: 94vh;
+}
+
+.image {
+  max-width: 92vw;
+  max-height: 92vh;
+  display: block;
+  margin: 2vh auto;
   position: relative;
+  margin: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: auto;
-  height: auto;
-  margin-bottom: 3%;
-  border: 3px solid rgba(50,50,50,1)
 }
 
-#close-icon {
-  border: none;
+.scroll-snap-parent {
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-snap-child {
+  scroll-snap-align: center;
 }
 
 @media only screen and (min-width: 600px) {
@@ -341,10 +364,6 @@ main p {
     background-color: rgba(50,50,50,1);
     color: white;
   }
-  .open-image {
-    max-width: 80vw;
-    max-height: 80vh;
-  }
   .close-icon {
     width: 3rem;
     margin: 1rem;
@@ -354,8 +373,5 @@ main p {
   }
   #coming-soon {
     min-height: 50vh;
-  }
-  .open-image-portfolio {
-    width: 90vw;
   }
 }
