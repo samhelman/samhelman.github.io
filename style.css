@@ -280,6 +280,30 @@ main p {
   scroll-snap-align: center;
 }
 
+.school {
+  position: relative;
+}
+
+.school .subtitle {
+  padding: 0;
+}
+
+.warwick-background {
+  background: url(./images/warwick.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.western-background {
+  background: url(./images/western.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.school-info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+}
+
 @media only screen and (min-width: 600px) {
   .menu-icon {
       display: none;
