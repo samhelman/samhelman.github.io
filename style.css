@@ -280,12 +280,15 @@ main p {
   scroll-snap-align: center;
 }
 
-.school {
-  position: relative;
+.school-info {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .school .subtitle {
   padding: 0;
+  font-style: italic;
+  text-align: left;
 }
 
 .warwick-background {
@@ -298,10 +301,9 @@ main p {
   background-size: cover;
 }
 
-.school-info {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-80%);
+.passion-one {
+  font-family: 'Passion One', cursive;
+  color: rgba(50,50,50,.9);
 }
 
 @media only screen and (min-width: 600px) {
@@ -394,5 +396,8 @@ main p {
   }
   #coming-soon {
     min-height: 50vh;
+  }
+  .school-info {
+    padding: 0;
   }
 }
