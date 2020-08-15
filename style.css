@@ -73,7 +73,11 @@ main div {
   background: url("./images/background-lightbulb.jpg") no-repeat center right scroll;
   background-size: cover;
   padding: 10vh 4vw;
-} 
+}
+
+.title-container {
+  padding: 0;
+}
 
 .main-content-title h1 {
   font-size: 12vw;
@@ -496,5 +500,11 @@ div .subtitle {
   .footer {
     position: relative;
     top: 44px;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .main-content-title {
+    padding: 40vh 4vw;
   }
 }
