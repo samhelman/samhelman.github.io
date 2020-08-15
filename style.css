@@ -424,6 +424,9 @@ div .subtitle {
   .profile-pic {
     width: 8rem;
   }
+  .quote-container {
+    padding: 0;
+  }
   main div {
     padding: 10vh 15vw;
   }
@@ -489,5 +492,9 @@ div .subtitle {
   }
   .school .subtitle {
     font-size: .8em;
+  }
+  .footer {
+    position: relative;
+    top: 44px;
   }
 }
