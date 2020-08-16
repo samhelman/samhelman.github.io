@@ -75,10 +75,6 @@ main div {
   padding: 10vh 4vw;
 }
 
-.title-container {
-  padding: 0;
-}
-
 .main-content-title h1 {
   font-size: 12vw;
 }
@@ -503,8 +499,8 @@ div .subtitle {
   }
 }
 
-@media only screen and (max-height: 400px) {
+@media only screen and (max-height: 450px) {
   .main-content-title {
-    padding: 40vh 4vw;
+    padding: 10vh 4vw;
   }
 }
