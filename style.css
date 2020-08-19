@@ -135,12 +135,14 @@ main li {
   color: white;
 }
 
+.quote-container {
+  padding: 0;
+}
+
 .quote {
   padding: .5em;
   border-top: 1px solid rgba(50,50,50,1);
   border-bottom: 1px solid rgba(50,50,50,1);
-  margin-right: 5vw;
-  margin-left: 5vw;
 }
 
 .profile-pic-container {
@@ -372,6 +374,53 @@ div .subtitle {
   opacity: .5;
 }
 
+.get-in-touch {
+  top: 44px;
+}
+
+.form-container label {
+  color: white;
+  font-size: 1.2em;
+}
+
+.form-container input {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  border: 1px solid rgba(50,50,50,1);
+  padding: 5px;
+}
+
+.form-container .input {
+  width: 100%;
+}
+
+.form-container textarea {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  min-height: 200px;
+  height: 30vh;
+  padding: 5px;
+  font-size: 1.2em;
+  border: 1px solid rgba(50,50,50,1);
+}
+
+.form-container .disclaimer {
+  margin: 5px;
+}
+
+.form-container .disclaimer-label {
+  font-size: 0.9em;
+}
+
+.form-container .submit-button {
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
 @media only screen and (min-width: 800px) {
   .footer {
     display: inline-flex;
@@ -424,8 +473,9 @@ div .subtitle {
   .profile-pic {
     width: 8rem;
   }
-  .quote-container {
-    padding: 0;
+  .quote {
+    margin-right: 5vw;
+    margin-left: 5vw;
   }
   main div {
     padding: 10vh 15vw;
@@ -496,6 +546,21 @@ div .subtitle {
   .footer {
     position: relative;
     top: 44px;
+  }
+  .get-in-touch p {
+    text-align: center;
+  }
+  .form-container input {
+    font-size: 1em;
+  }
+  .form-container label {
+    font-size: 1em;
+  }
+  .form-container textarea {
+    font-size: 1em;
+  }
+  .form-container .disclaimer-label {
+    font-size: .8em;
   }
 }
 

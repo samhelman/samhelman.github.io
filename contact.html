@@ -1,16 +1,15 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <link href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <title>Sam Helman - Education</title>
+    <title>Sam Helman - Home</title>
     <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
     <link rel="ICON" href="./icons/favicon.ico" type="image/ico" />
   </head>
   <body onresize="resizeNav()">
-
-    <div id="grey" class="grey"></div>
 
     <header class="main-header">
       <img id="toggle" class="menu-icon" src="./icons/menu-icon.svg" alt="Menu" width="50px" height="50px"/>
@@ -26,44 +25,39 @@
     </header>
 
     <main>
-      <div class="half-screen school">
-        <div class="school-info">
-          <h1>University of Warwick</h1>
-          <p class="subtitle">
-            BSc (Hons) Physics with Business Studies
-          </p>
-          <p>
-            Excelling in classes from both Physics and Business diciplines has
-            provided me with a keen business acumen, problem solving and critical 
-            thinking skills that will enable me to succeed in a professional web 
-            development workplace.
-          </p>
-        </div>
+      <div class="get-in-touch quarter-screen">
+        <h2>Get in Touch!</h2>
+        <p>
+          If would like to get in touch with me, just fill out this form and I 
+          will get back to you as soon as possible.
+        </p>
       </div>
-      <div class="half-screen warwick-background"></div>
-      <div class="half-screen school">
-        <div class="school-info">
-          <h1>Western University</h1>
-          <p class="subtitle">
-            One Year Foreign Exchange
-          </p>
-          <p>
-            Travelling to Canada and succeeding in a wide variety of classes demonstrates 
-            my dedicatiton, independence and ability to adapt quickly to new environments.
-          </p>
-        </div>
-      </div>
-      <div class="fill-screen western-background"></div>
-    </main>
+      <div class="form-container secondary">
+        <form action="https://formspree.io/mbjzeorv" method="POST">
 
-    <div id="open-image-container" class="open-image-container">
-      <img id="close-icon" class="close-icon" src="./icons/close-white.svg">
-      <div id="profilePic-grid" class="image-grid scroll-snap-parent">
-        <div class="image-container scroll-snap-child">
-          <img class="image" src="./images/pierogi.jpg">
-        </div>
+          <label for="email">Email:</label><br>
+          <input class="input" type="text" id="email" name="Email" required><br>
+
+          <label for="subject">Subject:</label><br>
+          <input class="input" type="text" id="subject" name="Subject" required><br>
+
+          <label for="message">Message:</label><br>
+          <textarea type="text" id="message" name="Message" required></textarea><br>
+
+          <label class="disclaimer-label">
+            <input class="disclaimer" type=checkbox required value="Test">
+            The form is powered by 
+            <a href="https://formspree.io/" target="_blank">Formspree</a>. Check here to indicate that you agree to their 
+            <a href="https://formspree.io/legal/terms-of-service" target="_blank">Terms of Use</a> and 
+            <a href="https://formspree.io/legal/privacy-policy" target="_blank">Privacy Policy</a>.
+          </label><br>
+
+          <input id="submit-button" class="submit-button" type="submit">
+
+        </form>
+        
       </div>
-    </div>
+    </main>
     
     <footer>
       <div class="footer">
