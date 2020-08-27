@@ -51,6 +51,7 @@
 .collapsable {
   height: 0;
   overflow: hidden;
+  transition: height 1s linear;
 }
 
 main div {
