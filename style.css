@@ -108,7 +108,7 @@ main li {
 }
 
 .background-image {
-  background: url(./images/pierogi.jpg) no-repeat center center fixed;
+  background: url(./images/desk.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -250,9 +250,13 @@ main li {
 .preview {
   max-width: 100%;
   max-height: 80vh;
-  border: 2px solid white;
+  border: 2px solid rgba(100,100,100,1);
   display: block;
   margin: auto;
+}
+
+.secondary .preview {
+  border-color: white;
 }
 
 .relative {
@@ -260,14 +264,15 @@ main li {
 }
 
 .coming-soon {
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 5vw;
 }
 
 .open-image-container {
@@ -543,6 +548,9 @@ div .subtitle {
   }
   #coming-soon {
     min-height: 50vh;
+  }
+  .coming-soon {
+    font-size: 4em;
   }
   .school-info {
     padding: 0;
