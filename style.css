@@ -253,6 +253,7 @@ main li {
   border: 2px solid rgba(100,100,100,1);
   display: block;
   margin: auto;
+  cursor: pointer;
 }
 
 .secondary .preview {
@@ -545,6 +546,7 @@ div .subtitle {
   .close-icon {
     width: 3rem;
     margin: 1rem;
+    cursor: pointer;
   }
   #coming-soon {
     min-height: 50vh;
