@@ -45,8 +45,24 @@
         </p>
       </div>
 
-      <!--enerquiz-->
+      <!--mywebresume-->
       <div class="secondary">
+        <div class="container">
+          <div class="top-item left-item">
+            <h2>MyWebResume</h2>
+            <p>
+              A web app built using Angular and Firebase that allows users to create and manage an online resume.
+            </p>
+          </div>
+          <div class="bottom-item right-item">
+            <img id="mywebresume" src="./images/mywebresume-1.png" class="preview">
+          </div>
+        </div>
+        <a href="https://github.com/samhelman/mywebresume" target="_blank" class="button left">Find Out More</a>
+      </div>
+
+      <!--enerquiz-->
+      <div class="">
         <div class="container">
           <div class="top-item left-item">
             <h2>EnerQuiz</h2>
@@ -71,7 +87,7 @@
 
 
       <!--energuy training db-->
-      <div>
+      <div class="secondary">
         <div class="container">
           <div class="top-item left-item">
             <h2>Energuy Training Database</h2>
@@ -101,7 +117,7 @@
       </div>
 
       <!--kimterpreting-->
-      <div class="secondary">
+      <div class="">
         <div class="container">
           <div class="top-item left-item">
             <h2>Kimterpreting</h2>
@@ -128,7 +144,7 @@
       </div>
 
       <!--WFMercado Content-->
-      <div>
+      <div class="secondary">
         <div class="container">
           <div class="top-item left-item">
             <h2>WFMercado</h2>
@@ -146,7 +162,7 @@
       </div>
 
       <!--WFStockTake Content-->
-      <div class="secondary">
+      <div class="">
         <div class="container">
           <div class="top-item left-item">
             <h2>WFStockTake</h2>
@@ -167,7 +183,7 @@
       </div>
       
       <!--samhelman.github.io content-->
-      <div>
+      <div class="secondary">
         <div class="container">
           <div class="top-item left-item">
             <h2>Resume Website</h2>
@@ -255,6 +271,18 @@
 
     <div id="open-image-container" class="open-image-container">
       <img id="close-icon" class="close-icon" src="./icons/close-white.svg">
+
+      <div id="mywebresume-grid" class="image-grid scroll-snap-parent">
+        <div class="image-container scroll-snap-child">
+          <img class="image" src="./images/mywebresume-1.png">
+        </div>
+        <div class="image-container scroll-snap-child">
+          <img class="image" src="./images/mywebresume-2.png">
+        </div>
+        <div class="image-container scroll-snap-child">
+          <img class="image" src="./images/mywebresume-3.png">
+        </div>
+      </div>
 
       <div id="quiz-grid" class="image-grid scroll-snap-parent">
         <div class="image-container scroll-snap-child">
@@ -448,6 +476,7 @@
       imageContainer.style.display = "none"
       grey.style.display = "none"
       //closeGrid("grid")
+      closeGrid("mywebresume-grid")
       closeGrid("quiz-grid")
       closeGrid("energuy-grid")
       closeGrid("kim-grid")
@@ -465,6 +494,8 @@
     }
 
     //open image event listeners
+    var mywebresume = document.getElementById("mywebresume")
+    mywebresume.addEventListener("click", function(){openImageContainer("mywebresume", "mywebresume-grid")})
     var quiz = document.getElementById("quiz")
     quiz.addEventListener("click", function(){openImageContainer("quiz", "quiz-grid")})
     var energuy = document.getElementById("energuy")
