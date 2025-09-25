@@ -1,167 +1,306 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <title>Sam Helman - Home</title>
-    <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
-    <link rel="ICON" href="./icons/favicon.ico" type="image/ico" />
-  </head>
-  <body onresize="resizeNav()">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loon Call Software - Professional Software Development</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #16494f; /* Dark Blue/Green */
+            --secondary-color: #e59d4e; /* Warm Orange */
+            --light-color: #f0f6f6; /* Off-white */
+            --font-stack: 'Montserrat', sans-serif;
+        }
 
-    <div id="grey" class="grey"></div>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <header class="main-header">
-      <img id="toggle" class="menu-icon" src="./icons/menu-icon.svg" alt="Menu" width="50px" height="50px"/>
-      <nav class="nav main-nav">
-        <ul id="nav-bar" class="collapsable">
-          <li><a href="https://samhelman.github.io/">Home</a></li>
-          <li><a href="https://samhelman.github.io/portfolio">Portfolio</a></li>
-          <li><a href="https://samhelman.github.io/experience">Experience</a></li>
-          <li><a href="https://samhelman.github.io/education">Education</a></li>
-          <li><a href="https://samhelman.github.io/contact">Contact</a></li>
-        </ul>
-      </nav>
+        body {
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Navigation --- */
+        .header {
+            background: var(--primary-color);
+            color: var(--light-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+        }
+
+        .logo img {
+            height: 7rem;
+        }
+
+        .nav-link {
+            color: var(--light-color);
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* --- Hero Section with Parallax Logo Background --- */
+        .hero {
+            /* background-image: url('./loon-call-software.png'); */
+            background-color: var(--primary-color);
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 70%;
+            color: var(--light-color);
+            text-align: center;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #d18a42;
+        }
+
+        /* --- Services Section --- */
+        .services {
+            padding: 80px 0;
+            text-align: center;
+            /* New: Ensures the content is visible above the separator */
+            position: relative;
+            z-index: 4;
+        }
+
+        .services h2 {
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+
+        .service-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            max-width: 380px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        .service-item p {
+            color: #555;
+        }
+
+        /* --- About Section --- */
+        .about {
+            background: #eef5f5;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background: var(--primary-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .founder-image-container {
+            display: flex;
+            justify-content: center;
+        }
+        .founder-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 0 2rem 2rem 2rem;
+        }
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/transparent-loon-call-software.png" alt="Loon Call Software Logo">
+            </a>
+            <nav>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-      <div class="fill-screen main-content-title">
-        <h1>Sam Helman</h1>
-        <p>Problem Solver, Results Oriented, Self Starter</p>
-      </div>
-      
-      <div class="fill-screen">
-        <div class="profile-pic-container">
-          <img id="profile-pic" class="profile-pic" src="./images/pp.jpg" alt="Image of Sam could not be displayed.">
-        </div>
-        <div class="quote-container">
-          <p class="quote">
-            I am a self-taught software developer looking to pursue a career in software development. With demonstrable 
-            technical proficiency in web design and mobile app development, a proven ability to apply my knowledge to new 
-            situations, and the ability to work well under pressure, in new environments and to stringent deadlines, I am 
-            an asset to any team.
-          </p>
-        </div>     
-      </div>  
+
+        <section class="hero">
+            <div class="container">
+                <h1>Your Ideas, Brought To Life.</h1>
+                <p>At Loon Call Software our mission is to be a genuine partner for small business. We combine the expertise of a professional developer with the personal touch of a family business to bring your vision to life.</p>
+                <a href="#contact" class="cta-button">Let's Get Started!</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Who Are We?</h2>
+                <div class="founder-image-container">
+                    <div class="founder-image">
+                        <img src="./assets/sam.png" alt="Founder's Photo">
+                    </div>
+                    <div class="founder-image">
+                        <img src="./assets/katie.png" alt="Founder's Photo">
+                    </div>
+                </div>
+                <p>Loon Call Software is a Canadian company founded on a simple idea: that top-tier software should be accessible to everyone. We partner with small businesses to make that a reality.</p>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>What Do We Do?</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Web Applications</h3>
+                        <p>We design and build custom web applications, from simple internal tools to complex, user-facing platforms. Whether you need a full-scale e-commerce site, a customer portal, or a unique data management system, we'll create a robust, scalable, and intuitive solution tailored to your business.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Mobile Apps</h3>
+                        <p>We build custom mobile applications for iOS and Android. From initial concept to launch, we craft beautiful, high-performance apps that are easy to use. Whether you need a simple tool or a complex platform, we'll deliver a solution that delights your users.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="services">
+            <div class="container">
+                <h2>Got an Idea? Let's Chat!</h2>
+                <a href="mailto:contact@looncall.tech" class="cta-button">Shoot Us An Email!</a>
+            </div>
+        </section>
+
     </main>
 
-    <div id="open-image-container" class="open-image-container">
-      <img id="close-icon" class="close-icon" src="./icons/close-white.svg">
-      <div id="profilePic-grid" class="image-grid scroll-snap-parent">
-        <div class="image-container scroll-snap-child">
-          <img class="image" src="./images/pp.jpg">
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Loon Call Software. All Rights Reserved.</p>
         </div>
-      </div>
-    </div>
-    
-    <footer>
-      <div class="footer">
-        <div class="link-container" id="wide">
-          <a href="https://samhelman.github.io/"><h1>Sam Helman</h1></a>
-        </div>
-        <div class="icons">
-          <a href="https://facebook.com/sam.helman.9/" target="_blank"><img src="./icons/fb.png" width=40px/></a>
-          <a href="https://instagram.com/samhelman/" target="_blank"><img src="./icons/ig.png" width=40px/></a>
-          <a href="https://linkedin.com/in/sam-helman" target="_blank"><img src="./icons/in.png" width=40px/></a>
-          <a href="https://github.com/samhelman/" target="_blank"><img src="./icons/gh.png" width=40px/></a>
-        </div>
-        <a href="https://samhelman.github.io/"><h1 id="narrow">Sam Helman</h1></a>
-      </div>
     </footer>
-  </body>
 
-  <!--sitewide script. script necessary for whole site.-->
-  <script>
-    //sets the height of the nav bar to auto
-    function openNav() {
-      document.getElementById("nav-bar").style.height = "auto"
-    };
-    //sets the height of the nav bar to zero
-    function closeNav() {
-      document.getElementById("nav-bar").style.height = "0"
-    };
-    //function that toggles the nav bar open/closed
-    function toggleNav() {
-      var height = document.getElementById("nav-bar").clientHeight
-      if (height > 0) {
-        closeNav()
-      } else {
-        openNav()
-      }
-    };
-    const toggle = document.getElementById("toggle");
-    toggle.addEventListener("click", toggleNav);
-    
-    //function to automatically show/hide the nav bar on orientation change
-    function resizeNav() {
-      if (window.innerWidth > 600) {
-        document.getElementById("nav-bar").style.height = "auto"
-      } else {
-        document.getElementById("nav-bar").style.height = "0"
-      }
-    }
-  </script>
-
-  <!--page script only-->
-  <script>
-    
-    //opens image, centers, disables scrolling when clicked
-
-    function disableScroll() { 
-      // Get the current page scroll position 
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
-      // if any scroll is attempted, set this to the previous value 
-      window.onscroll = function() { 
-        window.scrollTo(scrollLeft, scrollTop); 
-      }; 
-    }  
-
-    function enableScroll() { 
-      window.onscroll = function() {}; 
-    }
-
-    function scrollToCenter(id) {
-      var el = document.getElementById(id);
-      el.scrollIntoView({block: "center"})
-    }
-
-    var grey = document.getElementById("grey")
-    var imageContainer = document.getElementById("open-image-container")
-    var closeIcon = document.getElementById("close-icon")
-
-    function openImageContainer(id, child_id) {
-      imageContainer.style.display = "initial"
-      var el = document.getElementById(child_id)
-      el.style.height = "auto"
-      el.style.overflow = "scroll"
-      el.scrollTo(0,0)
-      grey.style.display = "initial"
-      scrollToCenter(id)
-      disableScroll()
-    }
-
-    function closeImageContainer() {
-      imageContainer.style.display = "none"
-      grey.style.display = "none"
-      //closeGrid("grid")
-      closeGrid("profilePic-grid")
-      enableScroll()
-    }
-
-    function closeGrid(gridId) {
-      var grid = document.getElementById(gridId)
-      grid.style.height = "0"
-      grid.style.overflow = "hidden"
-    }
-
-    //open image event listeners
-    var profilePic = document.getElementById("profile-pic")
-    profilePic.addEventListener("click", function(){openImageContainer("profile-pic", "profilePic-grid")})
-
-    //close image event listeners
-    grey.addEventListener("click", closeImageContainer)
-    closeIcon.addEventListener("click", closeImageContainer)
-  </script>
+</body>
 </html>
